@@ -1,5 +1,7 @@
 > [!NOTE]
 > **This is a fork of [tylertms/Stela](https://github.com/tylertms/Stela) that works on AMD Radeon support.** For releases, installs and the project itself, use upstream. Nothing here is an official Stela build.
+>
+> This is also a fork of Palayop7239's fork of Stela. Thank him 
 
 ## AMD Radeon work in this fork
 
@@ -95,4 +97,4 @@ Stela's code is GPL-2.0-or-later. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 ## Community
 
-[Discord Server](https://discord.gg/aSkwrJEMYc)
+[Discord Server](https://discord.gg/aSkwrJEMYc) -- Pretty sure this doesnt work.. try for yourself

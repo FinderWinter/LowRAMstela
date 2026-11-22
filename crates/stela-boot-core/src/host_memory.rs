@@ -19,7 +19,7 @@ const ALIGNMENT: u64 = 2 * MIB;
 /// per-block liveness takes NAK another 450 MiB for the compile. That
 /// peaked at 2150 MiB, and a boot with a fuller translation pack ran out of
 /// a 2304 MiB heap there.
-pub const HEAP_FLOOR: u64 = 2048 * MIB;
+pub const HEAP_FLOOR: u64 = 2560 * MIB;
 /// Above the floor, the heap grows with the host to this: a larger host
 /// runs more and larger pipelines, apps and translation packs.
 pub const HEAP_CEILING: u64 = 16 * GIB;
@@ -45,7 +45,7 @@ const HEAP_PER_WINDOW: u64 = 1;
 /// records come on top of the rest of the peak, which does not depend on
 /// the window. A 12 GiB VM with a 704 MiB window peaked at 2815 MiB carved,
 /// 2623 MiB less the 192 MiB of window past this one.
-const FLOOR_WINDOW: u64 = 256 * MIB;
+const FLOOR_WINDOW: u64 = 512 * MIB;
 /// Heap each running PE keeps for itself: its machine (about 1 MiB at
 /// start), ITLB (512 KiB), fetch and jump caches (about 0.8 MiB) and
 /// successor scratch (under 1 MiB); four times that, for its own compiles.
@@ -84,7 +84,7 @@ const UPPER_BASE: u64 = 32 * MIB;
 const UPPER_GROWTH: u64 = 1024;
 /// The least guest DRAM Stela boots macOS with. Below it macOS spends its
 /// time paging; 26A434 reaches the desktop with 3.1 GiB.
-pub const GUEST_FLOOR: u64 = 2560 * MIB;
+pub const GUEST_FLOOR: u64 = 3 * GIB;
 /// The step [`Shortfall::needed`] is found in.
 const NEEDED_STEP: u64 = 256 * MIB;
 /// Free host RAM bytes per byte of the persistent translation pack the

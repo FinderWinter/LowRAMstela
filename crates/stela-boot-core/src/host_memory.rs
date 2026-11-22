@@ -84,7 +84,7 @@ const UPPER_BASE: u64 = 32 * MIB;
 const UPPER_GROWTH: u64 = 1024;
 /// The least guest DRAM Stela boots macOS with. Below it macOS spends its
 /// time paging; 26A434 reaches the desktop with 3.1 GiB.
-pub const GUEST_FLOOR: u64 = 2560 * GIB;
+pub const GUEST_FLOOR: u64 = 2560 * MIB;
 /// The step [`Shortfall::needed`] is found in.
 const NEEDED_STEP: u64 = 256 * MIB;
 /// Free host RAM bytes per byte of the persistent translation pack the

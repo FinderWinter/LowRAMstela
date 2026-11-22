@@ -153,7 +153,7 @@ const WINDOW_SHARE: u64 = 16;
 pub const WINDOW_PER_RUNNER: u64 = 96 * MIB;
 /// The window per runner when [`WINDOW_PER_RUNNER`] would leave the guest
 /// under its floor ([`crate::host_memory::sizes`] falls back to it).
-pub const SMALL_WINDOW_PER_RUNNER: u64 = 64 * MIB;
+pub const SMALL_WINDOW_PER_RUNNER: u64 = 32 * MIB;
 const MIN_WINDOW: u64 = 64 * MIB;
 const MAX_WINDOW: u64 = 2048 * MIB;
 const CODE_ALIGNMENT: u64 = 16 * MIB;

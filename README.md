@@ -39,7 +39,7 @@ a model of Apple silicon hardware. macOS and most apps start, but it is slow and
 much more testing, as of v0.1.0
 
 > [!WARNING]
-Stela is very much still in development. Your current chances of it booting are low, major hardware support/fixes are on the way.
+Stela was still in development when TylerTMS took it down.. please be careful as this might not boot. I'll do my best to update this version of Stela. 
 
 ## Translator
 

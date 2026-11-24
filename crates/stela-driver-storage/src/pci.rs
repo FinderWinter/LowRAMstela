@@ -153,10 +153,10 @@ pub(super) fn measured_extended<C: ConfigSpace + ?Sized>(
                     return Err(invalid);
                 }
             }
-            3 | 4 | 0x0b | 0x18 | 0x1e | 0x1f => {}
+            3 | 4 | 0x0b | 0x18 | 0x19 | 0x1e | 0x1f | 0x25..=0x27 => {}
             _ => return Err(invalid),
         }
-        if id != 0x0b {
+        if id != 0x0b && id < 32 {
             let bit = 1 << id;
             if singletons & bit != 0 {
                 return Err(invalid);

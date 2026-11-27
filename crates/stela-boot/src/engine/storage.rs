@@ -1195,7 +1195,20 @@ pub unsafe fn open(
                     describe(&named, error)
                 ));
             }
-            Err((at, error)) => return Err(describe(&named[at], error)),
+            Err((at, error)) => {
+    let mut details = format!("{}", describe(&named[at], error));
+    for (addr, err) in &devices.failures {
+        details.push_str(&format!(" | pci {addr}: {err}"));
+    }
+    for (loc, err) in &devices.device_failures {
+        details.push_str(&format!(" | dev {loc}: {err}"));
+    }
+    for win in &devices.unmapped {
+        details.push_str(&format!(" | unmapped {win:x?}"));
+    }
+    return Err(refuse!("{}", details));
+}
+
         }
     };
     let mut host_disks = HostDisks {
